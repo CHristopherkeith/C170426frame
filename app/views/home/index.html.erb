@@ -5,21 +5,22 @@
 	<!-- <meta http-equiv="X-Frame-Options" content="deny"> -->
 	<title>frame</title>
 	<style type="text/css">
-		/*iframe[name='showframe']{
+		iframe[name='showframe']{
 			width: 500px;
 			height: 300px;
 			overflow: scroll;
-		}*/
+		}
 	</style>
 </head>
-<body>
+<body ng-app="frameApp" ng-controller="frameCtrl" ng-init="init()">
 <!-- <iframe src="/example/html/html_contents.html"></iframe> -->
 <div>
 	<!-- <a href="http://www.runoob.com" target="showframe">runoob</a> -->
-	<a href="http://127.0.0.1:3001" target="showframe">file</a>
+	<a href="http://localhost:3001" target="showframe">file</a>
 	<a href="http://www.w3school.com.cn" target="showframe">w3school</a>
 </div>
-
- <iframe src="http://www.w3school.com.cn" name="showframe" style = "overflow:scroll" width="100px" height="100px"></iframe>
+ <iframe src="http://localhost:3001" name="showframe" id="showframe"></iframe>
 </body>
+<script type="text/javascript" src="js/angular.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
 </html>
